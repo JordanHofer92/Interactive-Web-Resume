@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Montserrat&display=swap');
+
+:root {
+    --light-bg-color: #f7f0f5;
+    --dark-bg-color: #fcecc9;
+    --green-accent: #034c3c;
+    --blue-accent: #2f6690;
+    --red-accent: #ea2b1f;
+}
+
+body {
+    font-family: 'Montserrat';
+    background: var(--light-bg-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Gotu';
+    text-transform: capitalize;
+    text-align: center;
+}
+
+h1 {
+    color: var(--green-accent);
+    text-align: left;
+    margin-left: 10px;
+}
+
+h2 {
+    font-size: 21px
+}
+
+h3 {
+    color: var(--blue-accent);
+}
+
+p {
+    margin: 0 10%;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: var(--red-accent);
+    cursor: pointer;
+}
+
+ul, li {
+    list-style: none;
+    line-height: 1.5em;
+    padding: 0;
+    margin: 0px 1em;
+}
+
+.fa-html5 {
+    color: var(--red-accent);
+    margin-right: 15px;
+}
+
+.fa-css3-alt {
+    color: var(--blue-accent);
+    margin-right: 15px;
+}
+
+.fa-js-square {
+    color: #3a8e8f;
+    margin-right: 15px;
+}
+
+.fa-react {
+    color: #5ba8e3;
+    margin-right: 15px;
+}
+
+.fa-github-square {
+    margin-right: 15px;
+}
+
+.fa-linkedin {
+    color: #098df2;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+}
+
+#remote-work-graph {
+    width: 500px;
+    height: 500px;
+}

@@ -1,41 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Montserrat+Alternates:wght@400;700&display=swap');
+/* @media print {
+    body{
+        width: 21cm;
+        height: 29.7cm;
+        margin: 30mm 45mm 30mm 45mm; 
+   } 
+} */
 
 :root {
     --light-bg-color: #f7f0f5;
-    --dark-bg-color: #fcecc9;
+    --dark-bg-color: #3f3716;
     --green-accent: #034c3c;
     --blue-accent: #2f6690;
     --red-accent: #ea2b1f;
 }
 
 body {
-    font-family: 'Montserrat';
+    font-family: 'Gotu';
     background: var(--light-bg-color);
+    padding: 15px;
+    font-size: 16px;
+}
+
+section {
+    margin-bottom: 2em;
 }
 
 h1, h2, h3 {
-    font-family: 'Gotu';
+    font-family: 'Montserrat Alternates';
     text-transform: capitalize;
     text-align: center;
+    font-weight: 700;
 }
 
 h1 {
-    color: var(--green-accent);
-    text-align: left;
-    margin-left: 10px;
+    background: var(--blue-accent);
+    color: #f7f7f7;
+    font-size: 21px;
+    padding: 3px;
+    border-radius: 1em 4em;
+    max-width: 60%;
+    margin: 0 auto;
 }
 
 h2 {
-    font-size: 21px
+    font-size: 19px;
 }
 
 h3 {
-    color: var(--blue-accent);
+    color: var(--green-accent);
+    font-size: 17px;
 }
 
 p {
-    margin: 0 10%;
+    margin: 1em 10%;
     text-align: left;
+    line-height: 1.5em;
+    letter-spacing: .5px;
 }
 
 a {
@@ -52,7 +73,16 @@ ul, li {
     list-style: none;
     line-height: 1.5em;
     padding: 0;
-    margin: 0px 1em;
+    text-align: center;
+}
+
+
+.hardskills li {
+    margin-top: 1em;
+}
+
+.softskills li {
+    margin-top: 1em;
 }
 
 .fa-html5 {
@@ -66,7 +96,7 @@ ul, li {
 }
 
 .fa-js-square {
-    color: #3a8e8f;
+    color: rgb(238 219 69);
     margin-right: 15px;
 }
 
@@ -80,7 +110,26 @@ ul, li {
 }
 
 .fa-linkedin {
-    color: #098df2;
+    color: rgb(33 120 185);
+}
+
+.fa-phone-alt {
+    font-size: 25px;
+    margin-right: .5em;
+}
+
+.fa-envelope {
+    font-size: 25px;
+    margin-right: .5em;
+}
+
+.fa-globe {
+    font-size: 25px;
+    margin-right: .5em;
+}
+
+canvas {
+    margin: 0 auto;
 }
 
 .summary {
@@ -88,7 +137,133 @@ ul, li {
     flex-direction: column;
 }
 
-#remote-work-graph {
-    width: 500px;
-    height: 500px;
+.name h1 {
+    font-size: 30px;
+}
+
+
+.references p {
+    text-align: center;
+    line-height: 2em;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info h1 {
+    margin-bottom: 1.5em;
+}
+
+.contact {
+    margin-bottom: 1.5em;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-around;
+}
+
+.socials i {
+    font-size: 25px;
+}
+
+.socials a:nth-of-type(2){
+    margin-top: 1.5em;
+}
+
+.socials p {
+    display: none;
+}
+
+
+@media only screen and (min-width: 800px) {
+    body {
+        display: grid;
+        grid-template-areas: 
+        "intro intro intro"
+        "education summary summary"
+        "tools skills skills"
+        "tools workxp workxp"
+        "contact workxp workxp"
+        "references projects projects";
+        grid-template-columns: .75fr 1.25fr 1fr;
+        grid-template-rows: .75fr .75fr .75fr .75fr .75fr .75fr;
+    }
+
+    .intro {
+        grid-area: intro;
+    }
+
+    .summary {
+        grid-area: summary;
+    }
+
+    .work-experience {
+        grid-area: workxp;
+    }
+
+    .selected-projects {
+        grid-area: projects;
+    }
+
+    .education {
+        grid-area: education;
+        margin-left: 2em;
+    }
+
+    .hardskills {
+        grid-area: tools;
+    }
+
+    .softskills {
+        grid-area: skills;
+    }
+
+    .softskills ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .references {
+        grid-area: references;
+    }
+
+    .contact-info {
+        grid-area: contact;
+        margin-left: 2em;
+    }
+
+    .contact-info i {
+        margin-right: 1em;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: left;
+    }
+
+    .contact a {
+        display: flex;
+        align-items: center;
+    }
+
+    .socials {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    
+    .socials a {
+        display: flex;
+        align-items: center;
+    }
+    
+    .socials p {
+        display: initial;
+        margin: 0;
+    }
+    
 }

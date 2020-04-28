@@ -138,16 +138,14 @@ let accountabilityChart = new Chart(accountabilityCtx, {
 // let htmlChart = new Chart(htmlCtx, {
 //     type: 'horizontalBar',
 //     data: {
-//         labels: ['Proficiency', 'Growth'],
+//         labels: ['Proficiency'],
 //         datasets: [{
 //             label: 'Blue',
-//             data: [90, 10],
+//             data: [90],
 //             backgroundColor: [
-//                 'rgba(17, 76, 60, 0.5)',
-//                 'rgba(54, 103, 145, 0.3)'],
+//                 'rgba(17, 76, 60, 0.5)'],
 //             borderColor: [
-//                 'rgba(17, 76, 60, 1)',
-//                 'rgba(54, 103, 145, 1)'],
+//                 'rgba(17, 76, 60, 1)'],
 //             borderWidth: 1
 //         }]
 //     },

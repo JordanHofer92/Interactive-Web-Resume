@@ -1,6 +1,6 @@
-  //////////////////////////////////
- //Charts for soft-skills section//
-//////////////////////////////////
+  ////////////////////////////////////
+ // Charts for soft-skills section //
+////////////////////////////////////
 
 let remoteCtx = document.getElementById('remote-work-graph').getContext('2d');
 let remoteChart = new Chart(remoteCtx, {
@@ -130,36 +130,3 @@ let accountabilityChart = new Chart(accountabilityCtx, {
     }
 });
 
-  //////////////////////////////////
- //Charts for hard-skills section//
-//////////////////////////////////
-
-// let htmlCtx = document.getElementById('html-graph').getContext('2d');
-// let htmlChart = new Chart(htmlCtx, {
-//     type: 'horizontalBar',
-//     data: {
-//         labels: ['Proficiency'],
-//         datasets: [{
-//             label: 'Blue',
-//             data: [90],
-//             backgroundColor: [
-//                 'rgba(17, 76, 60, 0.5)'],
-//             borderColor: [
-//                 'rgba(17, 76, 60, 1)'],
-//             borderWidth: 1
-//         }]
-//     },
-//     options: {
-//         responsive: false,
-//             legend: {
-//                 display: false,
-//                         scales: {
-//                             yAxes: [{
-//                                 ticks: {
-//                                     beginAtZero: true
-//                                 }
-//                             }]
-//                         }    
-//         }
-//     }
-// });

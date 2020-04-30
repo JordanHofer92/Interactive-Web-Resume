@@ -64,12 +64,13 @@ a:hover {
 
 ul, li {
     list-style: none;
-    line-height: 1.5em;
+    line-height: 2em;
+    letter-spacing: .5px;
     padding: 0;
     text-align: center;
 }
 
-.hardskills div {
+.hardskills-spans {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,13 +191,14 @@ canvas {
 }
 
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
+    
     body {
         display: grid;
         grid-template-areas: 
         "intro intro intro"
         "education summary summary"
-        "tools skills skills"
+        "education skills skills"
         "tools workxp workxp"
         "contact workxp workxp"
         "references projects projects";
@@ -206,14 +208,19 @@ canvas {
 
     .intro {
         grid-area: intro;
+        justify-self: flex-end;
+        align-self: center;
+        width: 60%;
     }
 
     .summary {
         grid-area: summary;
+        align-self: center;
     }
 
     .work-experience {
         grid-area: workxp;
+        align-self: center;
     }
 
     .selected-projects {
@@ -223,6 +230,7 @@ canvas {
     .education {
         grid-area: education;
         margin-left: 2em;
+        align-self: center;
     }
 
     .hardskills {
@@ -230,8 +238,39 @@ canvas {
         margin-left: 2em;
     }
 
+    .hardskills-spans {
+        display: grid;
+        grid-template-areas: 
+        "markup styles"
+        "react react"
+        "js hub";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .markup {
+        grid-area: markup;
+    }
+
+    .styles {
+        grid-area: styles;
+    }
+
+    .js {
+        grid-area: js;
+    }
+
+    .react {
+        grid-area: react;
+    }
+
+    .hub {
+        grid-area: hub;
+    }
+
     .softskills {
         grid-area: skills;
+        align-self: center;
     }
 
     .softskills ul {
@@ -247,6 +286,8 @@ canvas {
     .contact-info {
         grid-area: contact;
         margin-left: 2em;
+        /* position: relative;
+        bottom: 6em; */
     }
 
     .contact-info i {
@@ -281,6 +322,10 @@ canvas {
     }
     
 }
+
+
+/* Animations for Tech-Skills icons */
+
 @keyframes spinner {
     from {
         -moz-transform: rotateY(0deg);
@@ -302,7 +347,7 @@ canvas {
     perspective: 1200px;
   }
 
-.fa-html5 {
+.fa-html5, .fa-css3-alt, .fa-js-square, .fa-react, .fa-github-square {
     -webkit-animation-name: spinner;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
@@ -319,95 +364,27 @@ canvas {
     transform-style: preserve-3d;
   }
 
-  .fa-html5:hover {
+  .fa-html5:hover, .fa-css3-alt:hover, .fa-js-square:hover, .fa-react:hover, .fa-github-square:hover {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
   }
 
   .fa-css3-alt {
-    -webkit-animation-name: spinner;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 5s;
-
-    animation-name: spinner;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
     animation-duration: 5s;
-
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-
-  .fa-css3-alt:hover {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
   }
 
   .fa-js-square {
-    -webkit-animation-name: spinner;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 6s;
-
-    animation-name: spinner;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
     animation-duration: 6s;
-
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-
-  .fa-js-square:hover {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
   }
 
   .fa-react {
-    -webkit-animation-name: spinner;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 7s;
-
-    animation-name: spinner;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
     animation-duration: 7s;
-
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-
-  .fa-react:hover {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
   }
 
   .fa-github-square {
-    -webkit-animation-name: spinner;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 8s;
-
-    animation-name: spinner;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
     animation-duration: 8s;
-
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-
-  .fa-github-square:hover {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
   }
